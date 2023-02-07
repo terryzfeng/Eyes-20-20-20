@@ -13,10 +13,10 @@ Minimize the terminal and it'll run in the background. Go on using your Mac codi
 
 # Pro Tip
 
-Add this line to your `~/.zshrc` as an quick alias shortcut
+Add this line to your `~/.zshrc` as a quick alias shortcut
 
 ```
-alias eyes="osascript <ABSOLUTE_PATH>/eyes.scpt
+alias eyes="osascript /PATH/TO/eyes.scpt"
 ```
 
 Now you can just type `eyes` and 20-20-20 will start. 

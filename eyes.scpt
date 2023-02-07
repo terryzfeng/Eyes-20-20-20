@@ -1,5 +1,5 @@
--- AppleScript to protect my eyes 
--- terry feng
+-- AppleScript to rest your eyes 
+-- written by terry feng
 
 log "Starting 20-20-20..."
 beep 
@@ -32,11 +32,25 @@ repeat while loop >= 0
     -- 20 second break
     say "stop"
     display dialog "Look at something 20 feet away" with icon stop with title "20-20-20" buttons {"OK"} default button "OK"
+    -- after, dim screen to 0
+    tell application "System Events"
+        repeat 32 times
+            key code 145
+            delay 0.01
+        end repeat
+    end tell
     -- Print how many sessions
     set loop to loop + 1
     log "Sessions: " & loop
 
     delay 20 -- Wait 
     beep 3 -- Resume
+    -- set brightness back to normal
+    tell application "System Events"
+        repeat 20 times
+            key code 144
+            delay 0.02
+	    end repeat
+    end tell
 
 end repeat
