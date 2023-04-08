@@ -12,7 +12,7 @@ repeat while loop >= 0
         -- Seconds
         set minuteCount to timer div 60
         if minuteCount = 0 then
-            set minuteCount to "00"
+            set minuteCount to "0"
         else 
             set minuteCount to minuteCount as string
         end if
